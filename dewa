@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dewa 19 — Official Band Fanpage</title>
+    
+    <!-- LINK EXTERNAL CSS SATELLITE (Sesuai Syarat Tugas) -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- FONTS & ICONS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-primary: #0a0b0e;
+            --bg-secondary: #13151c;
+            --bg-card: #1a1d26;
+            --accent-crimson: #d92332;
+            --accent-gold: #e5b869;
+            --accent-champagne: #f4e8cf;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: rgba(229, 184, 105, 0.2);
+            --glass-bg: rgba(19, 21, 28, 0.88);
+            --font-heading: 'Cinzel', serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 15%, rgba(217, 35, 50, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 75%, rgba(229, 184, 105, 0.06) 0%, transparent 45%);
+            background-attachment: fixed;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.1rem 2rem;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: 4px;
+            color: var(--text-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-crimson);
+            text-shadow: 0 0 12px rgba(217, 35, 50, 0.5);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.92rem;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            padding: 6px 12px;
+            border-radius: 6px;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent-gold);
+            background: rgba(229, 184, 105, 0.1);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-structure {
+            background: linear-gradient(135deg, var(--accent-crimson), #991b1b);
+            color: #ffffff;
+            border: 1px solid var(--accent-gold);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(217, 35, 50, 0.3);
+        }
+
+        .btn-structure:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(217, 35, 50, 0.5);
+            background: linear-gradient(135deg, #ef4444, var(--accent-crimson));
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-main);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .hero {
+            position: relative;
+            min-height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 4rem;
+        }
+
+        .hero-content {
+            flex: 1.1;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(217, 35, 50, 0.15);
+            border: 1px solid rgba(217, 35, 50, 0.4);
+            color: var(--accent-gold);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            line-height: 1.08;
+            margin-bottom: 1.2rem;
+            background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-title span {
+            background: linear-gradient(135deg, var(--accent-gold), #fef08a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 2.2rem;
+            max-width: 560px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-gold), #c5933a);
+            color: #0b0c10;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 800;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(229, 184, 105, 0.25);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(229, 184, 105, 0.4);
+            background: linear-gradient(135deg, #fcd34d, var(--accent-gold));
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-main);
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-crimson);
+            color: var(--accent-gold);
+            background: rgba(217, 35, 50, 0.1);
+        }
+
+        /* HERO IMAGE CARD WITH LOCAL PROJECT ASSET PATH */
+        .hero-image-wrapper {
+            flex: 0.9;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image-card {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9),
+                        0 0 35px rgba(217, 35, 50, 0.25);
+            background: var(--bg-card);
+        }
+
+        .hero-image-card img {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .hero-image-card:hover img {
+            transform: scale(1.04);
+        }
+
+        .hero-image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem;
+            background: linear-gradient(0deg, rgba(10,11,14,0.98) 0%, rgba(10,11,14,0) 100%);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .artist-tag {
+            font-size: 0.9rem;
+            color: var(--accent-gold);
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .asset-indicator {
+            font-size: 0.75rem;
+            background: rgba(0, 0, 0, 0.75);
+            border: 1px solid var(--border-color);
+            padding: 5px 10px;
+            border-radius: 6px;
+            color: #38bdf8;
+            font-family: monospace;
+        }
+
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* DISCOGRAPHY & MUSIC PLAYER */
+        .grid-albums {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .album-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .album-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent-gold);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .album-cover {
+            width: 100%;
+            height: 260px;
+            border-radius: 12px;
+            object-fit: cover;
+            margin-bottom: 1.2rem;
+        }
+
+        .album-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+            color: var(--accent-champagne);
+        }
+
+        .album-meta {
+            font-size: 0.85rem;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .track-list {
+            list-style: none;
+        }
+
+        .track-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.9rem;
+        }
+
+        .track-item i {
+            color: var(--accent-gold);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .track-item i:hover {
+            color: var(--accent-crimson);
+            transform: scale(1.25);
+        }
+
+        /* TOUR TABLE */
+        .tour-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-card);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .tour-table th, .tour-table td {
+            padding: 1.2rem 1.5rem;
+            text-align: left;
+        }
+
+        .tour-table th {
+            background: rgba(217, 35, 50, 0.15);
+            color: var(--accent-gold);
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .tour-table tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .tour-table tr:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .btn-ticket {
+            padding: 6px 16px;
+            background: transparent;
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+
+        .btn-ticket:hover {
+            background: var(--accent-gold);
+            color: #000;
+        }
+
+        /* GALLERY GRID */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 250px;
+            border: 1px solid var(--border-color);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* ASSIGNMENT STRUCTURE MODAL */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            width: 100%;
+            max-width: 900px;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.95);
+        }
+
+        .modal-header {
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0,0,0,0.4);
+        }
+
+        .modal-header h3 {
+            font-family: var(--font-heading);
+            color: var(--accent-gold);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-close {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-close:hover {
+            color: #fff;
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .folder-tree {
+            background: var(--bg-primary);
+            padding: 1.2rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.88rem;
+            color: #4ade80;
+            line-height: 1.5;
+        }
+
+        .file-tabs {
+            display: flex;
+            gap: 8px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            overflow-x: auto;
+        }
+
+        .file-tab {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid transparent;
+            color: var(--text-muted);
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-family: monospace;
+            white-space: nowrap;
+        }
+
+        .file-tab.active {
+            background: var(--accent-crimson);
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .code-viewer {
+            background: #08090c;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 8px;
+            padding: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.85rem;
+            color: #e2e8f0;
+            max-height: 280px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            position: relative;
+        }
+
+        .btn-copy {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            cursor: pointer;
+        }
+
+        .btn-copy:hover {
+            background: var(--accent-gold);
+            color: #000;
+        }
+
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links a {
+            color: var(--text-muted);
+            font-size: 1.3rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--accent-gold);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 2rem;
+            }
+
+            .hero-subtitle {
+                margin: 0 auto 2.2rem;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                DEWA <span>19</span>
+            </a>
+
+            <!-- LINK MENU FILE HTML TERPISAH (SESUAI SYARAT TUGAS) -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="active" onclick="switchPage('home', event)">Beranda</a></li>
+                <li><a href="pages/about.html" onclick="switchPage('about', event)">Biografi</a></li>
+                <li><a href="pages/discography.html" onclick="switchPage('discography', event)">Diskografi</a></li>
+                <li><a href="pages/tour.html" onclick="switchPage('tour', event)">Jadwal Konser</a></li>
+                <li><a href="pages/gallery.html" onclick="switchPage('gallery', event)">Galeri</a></li>
+                <li><a href="pages/contact.html" onclick="switchPage('contact', event)">Fan Club</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="btn-structure" onclick="openStructureModal()">
+                    <i class="fa-solid fa-folder-tree"></i> Lihat Struktur Tugas
+                </button>
+                <button class="menu-toggle" onclick="toggleMobileMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" id="home-view">
+            <div class="hero-content">
+                <span class="badge"><i class="fa-solid fa-crown"></i> Legenda Rock Indonesia — 30+ Tahun</span>
+                <h1 class="hero-title">Dewa <span>19</span></h1>
+                <p class="hero-subtitle">
+                    Grup musik rock paling berpengaruh di Indonesia bentukan Ahmad Dhani sejak 1986. Menghadirkan simfoni mahakarya "Kangen", "Separuh Nafas", "Roman Picisan" & "Cinta Adalah Misteri".
+                </p>
+                <div class="hero-buttons">
+                    <a href="#discography" onclick="switchPage('discography', event)" class="btn-primary">
+                        <i class="fa-solid fa-compact-disc"></i> Dengarkan Diskografi
+                    </a>
+                    <a href="#tour" onclick="switchPage('tour', event)" class="btn-secondary">
+                        <i class="fa-solid fa-ticket"></i> Pesta Rakyat Tour 2026
+                    </a>
+                </div>
+            </div>
+
+            <!-- CONTAINER GAMBAR HERO UTAMA (ASET PROJECT + FALLBACK OLEH SCRIPT) -->
+            <div class="hero-image-wrapper">
+                <div class="hero-image-card">
+                    <!-- Path aset gambar lokal project: assets/images/dewa19_hero.jpg -->
+                    <img 
+                        src="assets/images/dewa19_hero.jpg" 
+                        alt="Dewa 19 Band Portrait"
+                        id="hero-image-element"
+                        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80';"
+                    >
+                    <div class="hero-image-caption">
+                        <div>
+                            <div class="artist-tag">DEWA 19 MARESTRO</div>
+                            <small style="color: var(--text-muted);">Foto Utama Hero Section</small>
+                        </div>
+                        <span class="asset-indicator">
+                            <i class="fa-regular fa-image"></i> assets/images/dewa19_hero.jpg
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-section" style="border-top: 1px solid var(--border-color);">
+            <div class="section-header">
+                <h2>Sejarah & Biografi Band</h2>
+                <p>Perjalanan mahakarya tiga dekade musik tanah air dari Surabaya</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; align-items: stretch;">
+                <div style="background: var(--bg-card); padding: 2rem; border-radius: 16px; border: 1px solid var(--border-color);">
+                    <h3 style="font-family: var(--font-heading); color: var(--accent-gold); margin-bottom: 1rem; font-size: 1.4rem;">
+                        <i class="fa-solid fa-record-vinyl"></i> Awal Berdiri (1986)
+                    </h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                        Dewa 19 dibentuk di Surabaya pada tahun 1986 oleh empat siswa SMPN 6 Surabaya: <strong>Dhani Ahmad, Erwin Prasetya, Wawan Juniarso, dan Andra Junaidi</strong>. Nama DEWA merupakan akronim dari nama depan pendirinya.
+                    </p>
+                    <p style="color: var(--text-muted);">
+                        Angka '19' ditambahkan saat merilis album debut eponymous pada 1992 karena sebagian besar personil saat itu berusia 19 tahun.
+                    </p>
+                </div>
+
+                <div style="background: var(--bg-card); padding: 2rem; border-radius: 16px; border: 1px solid var(--border-color);">
+                    <h3 style="font-family: var(--font-heading); color: var(--accent-gold); margin-bottom: 1rem; font-size: 1.4rem;">
+                        <i class="fa-solid fa-users-line"></i> Era Vokalis & Formasi
+                    </h3>
+                    <ul style="list-style: none; color: var(--text-muted);">
+                        <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <strong style="color: var(--accent-champagne);">Ari Lasso Era (1991–1999):</strong> Meledakkan hits "Kangen", "Aku Milikmu", "Kirana", & "Cinta 'Kan Membawamu".
+                        </li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <strong style="color: var(--accent-champagne);">Once Mekel Era (1999–2011):</strong> Era keemasan album <em>Bintang Lima</em> & <em>Laskar Cinta</em>.
+                        </li>
+                        <li style="padding: 8px 0;">
+                            <strong style="color: var(--accent-champagne);">Pesta Rakyat Era (2021–Present):</strong> Feat. Ello & Virzha merajai stadion tur nusantara.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="discography">
+            <div class="section-header">
+                <h2>Diskografi Mahakarya</h2>
+                <p>Koleksi album studio legendaris yang memecahkan rekor rekam jutaan kopi</p>
+            </div>
+
+            <div class="grid-albums">
+                <!-- ALBUM 1 -->
+                <div class="album-card">
+                    <img 
+                        src="assets/images/album_bintang_lima.jpg" 
+                        alt="Bintang Lima Album Cover" 
+                        class="album-cover"
+                        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80';"
+                    >
+                    <h3 class="album-title">Bintang Lima</h3>
+                    <div class="album-meta">Album Studio • 2000 • 11 Track</div>
+                    <ul class="track-list">
+                        <li class="track-item">
+                            <span>1. Roman Picisan</span>
+                            <i class="fa-solid fa-circle-play" onclick="playSong('Roman Picisan')"></i>
+                        </li>
+                        <li class="track-item">
+                            <span>2. Dua Sedoli</span>
+                            <i class="fa-solid fa-circle-play" onclick="playSong('Dua Sedoli')"></i>
+                        </li>
+                        <li class="track-item">
+                            <span>3. Risalah Hati</span>
+                            <i class="fa-solid fa-circle-play" onclick="playSong('Risalah Hati')"></i>
+                        </li>
+                        <li class="track-item">
+                            <span>4. Separuh Nafas</span>
+                            <i class="fa-solid fa-circle-play" onclick="playSong('Separuh Nafas')"></i>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- ALBUM 2 -->
+                <div class="album-card">
+                    <img 
+                        src="assets/images/album_pandawa_lima.jpg" 
+                        alt="Pandawa Lima Album Cover" 
+                        class="album-cover"
+                        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=600&q=80';"
+                    >
+                    <h3 class="album-title">Pandawa Lima</h3>
+                    <div class="album-meta">Album Studio • 1997 • 10 Track</div>
+                    <ul class="track-list">
+                        <li class="track-item">
+                            <span>1. Kirana</span>
+                            <i class="fa-solid fa-circle-play" onclick="playSong('Kirana')"></i>
+                        </li>
+                        <li class="track-item">
+                            <span>2. Kamulah Satu-Satunya</span>
+                            <i class="fa-solid fa-circle-play" onclick="playSong('Kamulah Satu-Satunya')"></i>
+                        </li>
+                        <li class="track-item">
+                            <span>3. Aku Disini Untukmu</span>
+                            <i class="fa-solid fa-circle-play" onclick="playSong('Aku Disini Untukmu')"></i>
+                        </li>
+                        <li class="track-item">
+                            <span>4. Satu Sisi</span>
+                            <i class="fa-solid fa-circle-play" onclick="playSong('Satu Sisi')"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="tour">
+            <div class="section-header">
+                <h2>Jadwal Konser 'Pesta Rakyat 2026'</h2>
+                <p>Saksikan langsung megahnya aransemen musik Dewa 19 di kota Anda</p>
+            </div>
+
+            <table class="tour-table">
+                <thead>
+                    <tr>
+                        <th>TANGGAL</th>
+                        <th>KOTA & LOKASI</th>
+                        <th>STADION / VENUE</th>
+                        <th>TIKET</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>18 APR 2026</strong></td>
+                        <td>Jakarta, ID</td>
+                        <td>Stadion GBK Senayan</td>
+                        <td><button class="btn-ticket" onclick="buyTicket('Jakarta (GBK)')">Beli Tiket</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>02 MEI 2026</strong></td>
+                        <td>Surabaya, ID</td>
+                        <td>Stadion Gelora Bung Tomo</td>
+                        <td><button class="btn-ticket" onclick="buyTicket('Surabaya (GBT)')">Beli Tiket</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>16 MEI 2026</strong></td>
+                        <td>Bandung, ID</td>
+                        <td>Stadion Siliwangi</td>
+                        <td><button class="btn-ticket" onclick="buyTicket('Bandung')">Beli Tiket</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>06 JUN 2026</strong></td>
+                        <td>Bali, ID</td>
+                        <td>Taman Cultural GWK</td>
+                        <td><button class="btn-ticket" onclick="buyTicket('Bali (GWK)')">Beli Tiket</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="gallery">
+            <div class="section-header">
+                <h2>Galeri Konser & Dokumentasi</h2>
+                <p>Potret momen megah Pesta Rakyat & penampilan Dewa 19</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/images/dewa19_hero.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80';" alt="Dewa 19 Live 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/dewa19_gallery_2.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=600&q=80';" alt="Dewa 19 Live 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/dewa19_gallery_3.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80';" alt="Dewa 19 Live 3">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="section-header">
+                <h2>Pendaftaran Fan Club Baladewa</h2>
+                <p>Bergabung bersama ribuan Baladewa tanah air dan dapatkan info tiket eksklusif</p>
+            </div>
+
+            <div style="max-width: 600px; margin: 0 auto; background: var(--bg-card); padding: 2.2rem; border-radius: 16px; border: 1px solid var(--border-color);">
+                <form id="fan-form" onsubmit="handleFormSubmit(event)">
+                    <div style="margin-bottom: 1.2rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--accent-champagne); font-size: 0.9rem;">Nama Lengkap Baladewa</label>
+                        <input type="text" required placeholder="Masukkan nama Anda" style="width: 100%; padding: 10px 14px; background: var(--bg-primary); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: #fff; font-family: var(--font-body);">
+                    </div>
+                    <div style="margin-bottom: 1.2rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--accent-champagne); font-size: 0.9rem;">Email Aktif</label>
+                        <input type="email" required placeholder="baladewa@contoh.com" style="width: 100%; padding: 10px 14px; background: var(--bg-primary); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: #fff; font-family: var(--font-body);">
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--accent-champagne); font-size: 0.9rem;">Lagu Dewa 19 Favorit & Pesan</label>
+                        <textarea rows="4" required placeholder="Tuliskan lagu favorit dan kesan Anda..." style="width: 100%; padding: 10px 14px; background: var(--bg-primary); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: #fff; font-family: var(--font-body);"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; cursor: pointer;">
+                        <i class="fa-solid fa-paper-plane"></i> Gabung Komunitas Baladewa
+                    </button>
+                </form>
+                <div id="form-success" style="display: none; margin-top: 1rem; padding: 12px; background: rgba(74, 222, 128, 0.15); border: 1px solid #4ade80; color: #4ade80; border-radius: 6px; text-align: center; font-size: 0.9rem;">
+                    <i class="fa-solid fa-check-circle"></i> Selamat! Anda resmi terdaftar sebagai Baladewa Official.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL PENJELAJAH STRUKTUR TUGAS (FOLDER TREE & FILE CODE EXPORTER) -->
+    <div class="modal" id="structureModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-folder-tree"></i> Penjelajah & Verifikasi Struktur Tugas Dewa 19</h3>
+                <button class="btn-close" onclick="closeStructureModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <h4 style="color: var(--accent-gold); margin-bottom: 0.5rem; font-size: 0.95rem;">
+                        Struktur Directory Folder Tugas yang Disyaratkan:
+                    </h4>
+                    <div class="folder-tree">
+project-fanpage-dewa19/
+├── index.html                  (File HTML Utama Beranda)
+├── css/
+│   └── style.css               (File CSS Eksternal Utama)
+├── assets/
+│   ├── images/
+│   │   ├── dewa19_hero.jpg     (Gambar Utama Hero Section)
+│   │   ├── album_bintang_lima.jpg
+│   │   └── album_pandawa_lima.jpg
+│   └── audio/
+└── pages/
+    ├── about.html              (Link Menu HTML Biografi)
+    ├── discography.html        (Link Menu HTML Diskografi)
+    ├── tour.html               (Link Menu HTML Jadwal Konser)
+    ├── gallery.html            (Link Menu HTML Galeri)
+    └── contact.html            (Link Menu HTML Fan Club)
+                    </div>
+                </div>
+
+                <div>
+                    <h4 style="color: var(--accent-gold); margin-bottom: 0.8rem; font-size: 0.95rem;">
+                        Salin Kode File Terpisah untuk Pengumpulan Tugas Anda:
+                    </h4>
+                    <div class="file-tabs">
+                        <button class="file-tab active" onclick="showCodeTab('style-css', event)">css/style.css</button>
+                        <button class="file-tab" onclick="showCodeTab('about-html', event)">pages/about.html</button>
+                        <button class="file-tab" onclick="showCodeTab('discography-html', event)">pages/discography.html</button>
+                        <button class="file-tab" onclick="showCodeTab('tour-html', event)">pages/tour.html</button>
+                        <button class="file-tab" onclick="showCodeTab('contact-html', event)">pages/contact.html</button>
+                    </div>
+
+                    <div style="position: relative; margin-top: 10px;">
+                        <pre class="code-viewer" id="codeContainer"><code>/* css/style.css - Stylesheet Eksternal Tugas Dewa 19 */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #0a0b0e;
+    color: #f3f4f6;
+}
+
+.hero-image-card img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 20px;
+}</code></pre>
+                        <button class="btn-copy" onclick="copyCodeContent()"><i class="fa-regular fa-copy"></i> Salin Kode</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://spotify.com" target="_blank"><i class="fa-brands fa-spotify"></i></a>
+            <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+        <p>&copy; 2026 Dewa 19 Fanpage Project. Dibuat sesuai spesifikasi struktur folder & HTML/CSS eksternal.</p>
+    </footer>
+
+    <script>
+        // Data Kode File Terpisah untuk Penjelajah Struktur Tugas
+        const codeFiles = {
+            'style-css': `/* css/style.css - Stylesheet Eksternal Tugas Dewa 19 */
+:root {
+    --bg-primary: #0a0b0e;
+    --accent-crimson: #d92332;
+    --accent-gold: #e5b869;
+    --text-main: #f3f4f6;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+}
+
+.hero-image-card img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 20px;
+}`,
+            'about-html': `<!-- pages/about.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Biografi — Dewa 19</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1>Biografi Dewa 19</h1>
+    <p>Dewa 19 adalah band rock asal Surabaya yang dibentuk pada tahun 1986 oleh Ahmad Dhani, Erwin Prasetya, Wawan Juniarso, dan Andra Junaidi.</p>
+    <a href="../index.html">Kembali ke Beranda</a>
+</body>
+</html>`,
+            'discography-html': `<!-- pages/discography.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Diskografi — Dewa 19</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1>Diskografi Mahakarya</h1>
+    <ul>
+        <li>Bintang Lima (2000)</li>
+        <li>Pandawa Lima (1997)</li>
+        <li>Format Masa Depan (1994)</li>
+    </ul>
+    <a href="../index.html">Kembali ke Beranda</a>
+</body>
+</html>`,
+            'tour-html': `<!-- pages/tour.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Jadwal Tur — Dewa 19</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1>Jadwal Pesta Rakyat Konser 2026</h1>
+    <p>Jakarta, Surabaya, Bandung, Bali</p>
+    <a href="../index.html">Kembali ke Beranda</a>
+</body>
+</html>`,
+            'contact-html': `<!-- pages/contact.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Fan Club Baladewa — Dewa 19</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1>Pendaftaran Baladewa</h1>
+    <form>
+        <input type="text" placeholder="Nama Baladewa">
+        <button type="submit">Gabung</button>
+    </form>
+    <a href="../index.html">Kembali ke Beranda</a>
+</body>
+</html>`
+        };
+
+        // Fungsi Modal Inspector Struktur Tugas
+        function openStructureModal() {
+            document.getElementById('structureModal').classList.add('active');
+        }
+
+        function closeStructureModal() {
+            document.getElementById('structureModal').classList.remove('active');
+        }
+
+        function showCodeTab(key, event) {
+            document.querySelectorAll('.file-tab').forEach(tab => tab.classList.remove('active'));
+            if(event) event.target.classList.add('active');
+            
+            const codeViewer = document.querySelector('#codeContainer code');
+            codeViewer.textContent = codeFiles[key] || '';
+        }
+
+        function copyCodeContent() {
+            const codeText = document.querySelector('#codeContainer code').textContent;
+            navigator.clipboard.writeText(codeText).then(() => {
+                const btn = document.querySelector('.btn-copy');
+                btn.innerHTML = '<i class="fa-solid fa-check"></i> Tersalin!';
+                setTimeout(() => {
+                    btn.innerHTML = '<i class="fa-regular fa-copy"></i> Salin Kode';
+                }, 2000);
+            });
+        }
+
+        // Navigasi Smooth Switch Page
+        function switchPage(pageKey, event) {
+            if (event) {
+                event.preventDefault();
+            }
+            
+            document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+            if(event && event.target) {
+                event.target.classList.add('active');
+            }
+
+            const targetElement = document.getElementById(pageKey === 'home' ? 'home-view' : pageKey + '-section') || document.getElementById(pageKey);
+            if(targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function playSong(songTitle) {
+            const toast = document.createElement('div');
+            toast.style.position = 'fixed';
+            toast.style.bottom = '20px';
+            toast.style.right = '20px';
+            toast.style.background = 'var(--accent-gold)';
+            toast.style.color = '#000';
+            toast.style.padding = '12px 20px';
+            toast.style.borderRadius = '8px';
+            toast.style.fontWeight = 'bold';
+            toast.style.zIndex = '3000';
+            toast.innerHTML = `<i class="fa-solid fa-music"></i> Memutar preview: ${songTitle}`;
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.remove();
+            }, 3000);
+        }
+
+        function buyTicket(city) {
+            const toast = document.createElement('div');
+            toast.style.position = 'fixed';
+            toast.style.bottom = '20px';
+            toast.style.right = '20px';
+            toast.style.background = 'var(--accent-crimson)';
+            toast.style.color = '#fff';
+            toast.style.padding = '12px 20px';
+            toast.style.borderRadius = '8px';
+            toast.style.fontWeight = 'bold';
+            toast.style.zIndex = '3000';
+            toast.innerHTML = `<i class="fa-solid fa-ticket"></i> Mengalihkan ke tiket Pesta Rakyat ${city}...`;
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.remove();
+            }, 3000);
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            document.getElementById('form-success').style.display = 'block';
+            event.target.reset();
+            setTimeout(() => {
+                document.getElementById('form-success').style.display = 'none';
+            }, 5000);
+        }
+
+        function toggleMobileMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            if(navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '70px';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'var(--bg-card)';
+                navLinks.style.padding = '1.5rem';
+                navLinks.style.borderBottom = '1px solid var(--border-color)';
+            }
+        }
+    </script>
+</body>
+</html>
